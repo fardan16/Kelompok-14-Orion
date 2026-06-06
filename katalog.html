@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Menu - Warung Pangsit Mie Ayam & Bakso Meteor</title>
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="assets/icons/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVBAR -->
+    <header id="mainHeader">
+        <div class="header-inner">
+            <a href="index.html" class="logo-link">
+                <div class="logo-container">
+                    <img src="assets/icons/logo.svg" alt="Logo Bakso Meteor" class="logo-img" onerror="this.src='assets/icons/logo.png'">
+                    <div class="logo-text">
+                        <span class="logo-name">Bakso Meteor</span>
+                        <span class="logo-sub">Warung Pangsit & Mie Ayam</span>
+                    </div>
+                </div>
+            </a>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="nav-links" id="mainNav">
+                <a href="index.html" class="nav-item">Beranda</a>
+                <a href="katalog.html" class="nav-item active">Katalog Menu</a>
+                <button onclick="openModal()" class="nav-item btn-nav">Cara Order</button>
+                <a href="kontak.html" class="nav-item">Lokasi & Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- KATALOG HEADER -->
+        <section class="page-hero fade-up">
+            <div class="section-label">🍜 Menu Lengkap</div>
+            <h2 class="section-title">Katalog Menu Kami</h2>
+            <p class="section-desc">Pilih hidangan favoritmu. Tersedia bakso, mie ayam, pangsit, nasi, dan minuman segar.</p>
+        </section>
+
+        <!-- FILTER TOMBOL -->
+        <section class="filter-section">
+            <div class="filter-container">
+                <button class="btn-filter active" onclick="filterKategori('Semua', this)">Semua Menu</button>
+                <button class="btn-filter" onclick="filterKategori('Bakso', this)">🥣 Bakso</button>
+                <button class="btn-filter" onclick="filterKategori('Mie Ayam', this)">🍜 Mie Ayam</button>
+                <button class="btn-filter" onclick="filterKategori('Bakso & Mie Ayam', this)">🔥 Bakso & Mie Ayam</button>
+                <button class="btn-filter" onclick="filterKategori('Nasi & Makanan Berat', this)">🍚 Nasi & Makanan Berat</button>
+                <button class="btn-filter" onclick="filterKategori('Minuman', this)">🥤 Minuman</button>
+            </div>
+        </section>
+
+        <!-- GRID KATALOG -->
+        <section class="katalog-content">
+            <div class="katalog-info fade-up">
+                <span id="jumlahMenu">Menampilkan semua menu</span>
+            </div>
+            <div id="katalog-container" class="grid-container fade-up">
+                <!-- Diisi oleh JavaScript -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODAL CARA ORDER -->
+    <div id="orderModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-content fade-up">
+            <button class="close-btn" onclick="closeModal()" aria-label="Tutup">×</button>
+            <h2 id="modalTitle" class="modal-title">Cara Pemesanan</h2>
+            <p class="modal-subtitle">Pilih metode yang paling mudah untuk Anda</p>
+
+            <div class="order-options">
+                <div class="order-box">
+                    <div class="order-box-header">
+                        <span class="order-icon">🛵</span>
+                        <h3>Pesan Online</h3>
+                    </div>
+                    <p class="order-box-desc">Pesan antar langsung ke lokasi Anda:</p>
+                    <div class="online-buttons">
+                        <a href="https://grab.com" target="_blank" rel="noopener" class="btn-app btn-grab">
+                            <img src="assets/icons/grab.png" alt="Grab" onerror="this.style.display='none'">
+                            <span>GrabFood</span>
+                        </a>
+                        <a href="https://gojek.com" target="_blank" rel="noopener" class="btn-app btn-gojek">
+                            <img src="assets/icons/gojek.png" alt="GoFood" onerror="this.style.display='none'">
+                            <span>GoFood</span>
+                        </a>
+                        <a href="https://maxim.com" target="_blank" rel="noopener" class="btn-app btn-maxim">
+                            <img src="assets/icons/maxim.png" alt="Maxim" onerror="this.style.display='none'">
+                            <span>Maxim</span>
+                        </a>
+                        <a href="https://shopee.co.id" target="_blank" rel="noopener" class="btn-app btn-shopee">
+                            <img src="assets/icons/shopee.png" alt="ShopeeFood" onerror="this.style.display='none'">
+                            <span>ShopeeFood</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="order-box">
+                    <div class="order-box-header">
+                        <span class="order-icon">🍽️</span>
+                        <h3>Makan di Tempat</h3>
+                    </div>
+                    <ol class="offline-steps">
+                        <li>Ambil kertas catatan & daftar menu di area pemesanan.</li>
+                        <li>Cari tempat duduk dan catat nomor meja Anda.</li>
+                        <li>Tulis pesanan, nama, dan nomor meja di kertas.</li>
+                        <li>Serahkan kertas ke petugas kami.</li>
+                        <li>Tunggu pesanan diantarkan — selamat menikmati!</li>
+                        <li>Bayar di kasir setelah selesai makan.</li>
+                    </ol>
+                </div>
+
+                <div class="order-box order-box--special">
+                    <div class="order-box-header">
+                        <span class="order-icon">📦</span>
+                        <h3>Katering & Hampers</h3>
+                    </div>
+                    <p class="order-box-desc">Melayani pesanan partai besar untuk acara, rapat, atau hampers khusus.</p>
+                    <a href="https://wa.me/628123456789" class="btn-wa" target="_blank" rel="noopener">
+                        💬 Chat WA Owner
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3 class="footer-name">Warung Pangsit Mie Ayam & Bakso Meteor</h3>
+                <p>Kota Palu, Sulawesi Tengah · Buka setiap hari 10.00–22.00 WITA</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/baksometeorpalu" target="_blank" rel="noopener">
+                    📸 @baksometeorpalu
+                </a>
+                <a href="#" target="_blank" rel="noopener">
+                    🎵 @baksometeorpalu
+                </a>
+            </div>
+            <div class="footer-copy">
+                <p>© 2026 Solusi Digital UMKM Kota Palu — Kelompok 14 Orion</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
