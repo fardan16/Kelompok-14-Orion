@@ -30,7 +30,7 @@ document.addEventListener("keydown", function (e) {
 
 
 const hamburgerBtn = document.getElementById("hamburgerBtn");
-const mainNav      = document.getElementById("mainNav");
+const mainNav = document.getElementById("mainNav");
 
 // fungsi untuk menu navigasi di hp
 if (hamburgerBtn && mainNav) {
@@ -61,50 +61,49 @@ window.addEventListener("scroll", function () {
 
 
 const menuData = [
-    { id: 1,  nama: "Bakso Biasa",                  harga: 15000, kategori: "Bakso",                 img: "assets/img/bakso-biasa.jpg" },
-    { id: 2,  nama: "Bakso Meteor",                 harga: 20000, kategori: "Bakso",                 img: "assets/img/bakso-meteor.jpg" },
-    { id: 3,  nama: "Bakso Setan",                  harga: 25000, kategori: "Bakso",                 img: "assets/img/bakso-setan.jpg" },
-    { id: 4,  nama: "Bakso Campur",                 harga: 20000, kategori: "Bakso",                 img: "assets/img/bakso-campur.jpg" },
-    { id: 5,  nama: "Bakso Iga",                    harga: 30000, kategori: "Bakso",                 img: "assets/img/bakso-iga.jpg" },
-    { id: 6,  nama: "Bakso Ikan",                   harga: 20000, kategori: "Bakso",                 img: "assets/img/bakso-ikan.jpg" },
-    { id: 7,  nama: "Bakso Beranak",                harga: 25000, kategori: "Bakso",                 img: "assets/img/bakso-beranak.jpg" },
-    { id: 8,  nama: "Bakso Tenes",                  harga: 20000, kategori: "Bakso",                 img: "assets/img/bakso-tenes.jpg" },
-    { id: 9,  nama: "Bakso Urat Kribo Jumbo",       harga: 20000, kategori: "Bakso",                 img: "assets/img/bakso-urat-kribo.jpg" },
-    { id: 10, nama: "Bakso Lava",                   harga: 30000, kategori: "Bakso",                 img: "assets/img/bakso-lava.jpg" },
-    { id: 11, nama: "Bakso Klenger",                harga: 30000, kategori: "Bakso",                 img: "assets/img/bakso-klenger.jpg" },
-    { id: 12, nama: "Mie Ayam Biasa",               harga: 15000, kategori: "Mie Ayam",              img: "assets/img/mie-ayam-biasa.jpg" },
-    { id: 13, nama: "Mie Ayam Telur",               harga: 20000, kategori: "Mie Ayam",              img: "assets/img/mie-ayam-telur.jpg" },
-    { id: 14, nama: "Mie Ayam Gepeng",              harga: 18000, kategori: "Mie Ayam",              img: "assets/img/mie-ayam-gepeng.jpg" },
-    { id: 15, nama: "Mie Ayam Setan",               harga: 18000, kategori: "Mie Ayam",              img: "assets/img/mie-ayam-setan.jpg" },
-    { id: 16, nama: "Mie Ayam Pangsit Basah",       harga: 18000, kategori: "Mie Ayam",              img: "assets/img/mie-ayam-pangsit.jpg" },
-    { id: 17, nama: "Mie Ayam Bakso Campur",        harga: 25000, kategori: "Bakso & Mie Ayam",      img: "assets/img/mie-bakso-campur.jpg" },
-    { id: 18, nama: "Mie Ayam Bakso Tenes",         harga: 30000, kategori: "Bakso & Mie Ayam",      img: "assets/img/mie-bakso-tenes.jpg" },
-    { id: 19, nama: "Mie Ayam Bakso Beranak",       harga: 40000, kategori: "Bakso & Mie Ayam",      img: "assets/img/mie-bakso-beranak.jpg" },
-    { id: 20, nama: "Mie Ayam Setan + Bakso Setan", harga: 45000, kategori: "Bakso & Mie Ayam",      img: "assets/img/mie-bakso-setan.jpg" },
-    { id: 21, nama: "Nasi Ayam Bakar",              harga: 25000, kategori: "Nasi & Makanan Berat",  img: "assets/img/nasi-ayam-bakar.jpg" },
-    { id: 22, nama: "Nasi Ayam Goreng",             harga: 25000, kategori: "Nasi & Makanan Berat",  img: "assets/img/nasi-ayam-goreng.jpg" },
-    { id: 23, nama: "Rawon",                        harga: 25000, kategori: "Nasi & Makanan Berat",  img: "assets/img/rawon.jpg" },
-    { id: 24, nama: "Es Teh",                       harga: 5000,  kategori: "Minuman",               img: "assets/img/es-teh.jpg" },
-    { id: 25, nama: "Es Jeruk Buah",                harga: 8000,  kategori: "Minuman",               img: "assets/img/es-jeruk-buah.jpg" },
-    { id: 26, nama: "Es Jeruk Nipis",               harga: 8000,  kategori: "Minuman",               img: "assets/img/es-jeruk-nipis.jpg" },
-    { id: 27, nama: "Es Campur",                    harga: 15000, kategori: "Minuman",               img: "assets/img/es-campur.jpg" },
-    { id: 28, nama: "Es Milo",                      harga: 10000, kategori: "Minuman",               img: "assets/img/es-milo.jpg" },
-    { id: 29, nama: "Jus Apel",                     harga: 15000, kategori: "Minuman",               img: "assets/img/jus-apel.jpg" },
-    { id: 30, nama: "Jus Mangga",                   harga: 15000, kategori: "Minuman",               img: "assets/img/jus-mangga.jpg" },
-    { id: 31, nama: "Jus Cappuccino",               harga: 15000, kategori: "Minuman",               img: "assets/img/jus-cappuccino.jpg" },
-    { id: 32, nama: "Jus Buah Naga",                harga: 15000, kategori: "Minuman",               img: "assets/img/jus-buah-naga.jpg" },
-    { id: 33, nama: "Jus Sirsak",                   harga: 15000, kategori: "Minuman",               img: "assets/img/jus-sirsak.jpg" },
-    { id: 34, nama: "Jus Melon",                    harga: 15000, kategori: "Minuman",               img: "assets/img/jus-melon.jpg" },
-    { id: 35, nama: "Jus Semangka",                 harga: 15000, kategori: "Minuman",               img: "assets/img/jus-semangka.jpg" },
-    { id: 36, nama: "Jus Alpukat",                  harga: 15000, kategori: "Minuman",               img: "assets/img/jus-alpukat.jpg" }
+    { id: 1, nama: "Bakso Biasa", harga: 15000, kategori: "Bakso", img: "assets/img/bakso-biasa.webp" },
+    { id: 2, nama: "Bakso Meteor", harga: 20000, kategori: "Bakso", img: "assets/img/bakso-meteor.webp" },
+    { id: 3, nama: "Bakso Setan", harga: 25000, kategori: "Bakso", img: "assets/img/bakso-setan.webp" },
+    { id: 4, nama: "Bakso Campur", harga: 20000, kategori: "Bakso", img: "assets/img/bakso-campur.webp" },
+    { id: 5, nama: "Bakso Iga", harga: 30000, kategori: "Bakso", img: "assets/img/bakso-iga.jpg" },
+    { id: 6, nama: "Bakso Ikan", harga: 20000, kategori: "Bakso", img: "assets/img/bakso-ikan.webp" },
+    { id: 7, nama: "Bakso Beranak", harga: 25000, kategori: "Bakso", img: "assets/img/bakso-beranak.webp" },
+    { id: 8, nama: "Bakso Tenes", harga: 20000, kategori: "Bakso", img: "assets/img/bakso-tenes.webp" },
+    { id: 9, nama: "Bakso Urat Kribo Jumbo", harga: 20000, kategori: "Bakso", img: "assets/img/bakso-urat-kribo.webp" },
+    { id: 10, nama: "Bakso Lava", harga: 30000, kategori: "Bakso", img: "assets/img/bakso-lava.webp" },
+    { id: 11, nama: "Bakso Klenger", harga: 30000, kategori: "Bakso", img: "assets/img/bakso-klenger.webp" },
+    { id: 12, nama: "Mie Ayam Biasa", harga: 15000, kategori: "Mie Ayam", img: "assets/img/mie-ayam-biasa.webp" },
+    { id: 13, nama: "Mie Ayam Telur", harga: 20000, kategori: "Mie Ayam", img: "assets/img/mie-ayam-telur.webp" },
+    { id: 14, nama: "Mie Ayam Gepeng", harga: 18000, kategori: "Mie Ayam", img: "assets/img/mie-ayam-gepeng.webp" },
+    { id: 15, nama: "Mie Ayam Setan", harga: 18000, kategori: "Mie Ayam", img: "assets/img/mie-ayam-setan.webp" },
+    { id: 16, nama: "Mie Ayam Pangsit Basah", harga: 18000, kategori: "Mie Ayam", img: "assets/img/mie-ayam-pangsit-basah.webp" },
+    { id: 17, nama: "Mie Ayam Bakso Campur", harga: 25000, kategori: "Bakso & Mie Ayam", img: "assets/img/mie-ayam-bakso-campur.webp" },
+    { id: 18, nama: "Mie Ayam Bakso Tenes", harga: 30000, kategori: "Bakso & Mie Ayam", img: "assets/img/mie-ayam-bakso-tenes.webp" },
+    { id: 19, nama: "Mie Ayam Bakso Beranak", harga: 40000, kategori: "Bakso & Mie Ayam", img: "assets/img/mie-ayam-bakso-beranak.webp" },
+    { id: 20, nama: "Mie Ayam Setan + Bakso Setan", harga: 45000, kategori: "Bakso & Mie Ayam", img: "assets/img/mie-bakso-setan.webp" },
+    { id: 21, nama: "Nasi Ayam Bakar", harga: 25000, kategori: "Nasi & Makanan Berat", img: "assets/img/nasi-ayam-bakar.webp" },
+    { id: 22, nama: "Nasi Ayam Goreng", harga: 25000, kategori: "Nasi & Makanan Berat", img: "assets/img/nasi-ayam-goreng.webp" },
+    { id: 23, nama: "Rawon", harga: 25000, kategori: "Nasi & Makanan Berat", img: "assets/img/rawon.webp" },
+    { id: 24, nama: "Es Teh", harga: 5000, kategori: "Minuman", img: "assets/img/esteh.webp" },
+    { id: 25, nama: "Es Jeruk Buah", harga: 8000, kategori: "Minuman", img: "assets/img/esjeruk.webp" },
+    { id: 26, nama: "Es Jeruk Nipis", harga: 8000, kategori: "Minuman", img: "assets/img/esjeruk-nipis.webp" },
+    { id: 27, nama: "Es Campur", harga: 15000, kategori: "Minuman", img: "assets/img/escampur.webp" },
+    { id: 28, nama: "Es Milo", harga: 10000, kategori: "Minuman", img: "assets/img/esmilo.webp" },
+    { id: 29, nama: "Jus Apel", harga: 15000, kategori: "Minuman", img: "assets/img/jus-apel.webp" },
+    { id: 30, nama: "Jus Mangga", harga: 15000, kategori: "Minuman", img: "assets/img/jus-mangga.webp" },
+    { id: 31, nama: "Jus Cappuccino", harga: 15000, kategori: "Minuman", img: "assets/img/jus-cappuccino.webp" },
+    { id: 32, nama: "Jus Buah Naga", harga: 15000, kategori: "Minuman", img: "assets/img/jus-buah-naga.webp" },
+    { id: 33, nama: "Jus Sirsak", harga: 15000, kategori: "Minuman", img: "assets/img/jus-sirsak.webp" },
+    { id: 34, nama: "Jus Semangka", harga: 15000, kategori: "Minuman", img: "assets/img/jus-semangka.webp" },
+    { id: 35, nama: "Jus Alpukat", harga: 15000, kategori: "Minuman", img: "assets/img/jus-alpukat.webp" }
 ];
 
 
 function renderKatalog(data) {
     const container = document.getElementById("katalog-container");
-    const infoEl    = document.getElementById("jumlahMenu");
+    const infoEl = document.getElementById("jumlahMenu");
 
-    if (!container) return; 
+    if (!container) return;
 
     // mengubah keterangan jumlah menu
     if (infoEl) {
@@ -182,7 +181,7 @@ const formPengaduan = document.getElementById("formPengaduan");
 
 if (formPengaduan) {
     formPengaduan.addEventListener("submit", function (e) {
-        e.preventDefault(); 
+        e.preventDefault();
 
         const btnSubmit = document.getElementById("btnSubmit");
         const successMsg = document.getElementById("successMsg");
@@ -199,23 +198,23 @@ if (formPengaduan) {
             body: new FormData(formPengaduan),
             headers: { "Accept": "application/json" }
         })
-        .then(function (response) {
-            if (response.ok) {
-                if (successMsg) successMsg.style.display = "block";
-                formPengaduan.reset();
-            } else {
-                alert("Gagal mengirim pesan. Silakan coba lagi atau hubungi kami via WhatsApp.");
-            }
-        })
-        .catch(function () {
-            alert("Koneksi gagal. Periksa internet Anda dan coba lagi.");
-        })
-        .finally(function () {
-            // mengembalikan tombol kirim seperti awal
-            if (btnSubmit) {
-                btnSubmit.textContent = "📨 Kirim Pesan";
-                btnSubmit.disabled = false;
-            }
-        });
+            .then(function (response) {
+                if (response.ok) {
+                    if (successMsg) successMsg.style.display = "block";
+                    formPengaduan.reset();
+                } else {
+                    alert("Gagal mengirim pesan. Silakan coba lagi atau hubungi kami via WhatsApp.");
+                }
+            })
+            .catch(function () {
+                alert("Koneksi gagal. Periksa internet Anda dan coba lagi.");
+            })
+            .finally(function () {
+                // mengembalikan tombol kirim seperti awal
+                if (btnSubmit) {
+                    btnSubmit.textContent = "📨 Kirim Pesan";
+                    btnSubmit.disabled = false;
+                }
+            });
     });
 }
