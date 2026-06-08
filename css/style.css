@@ -860,18 +860,6 @@ header {
     flex-wrap: wrap;
 }
 
-.sosmed-btn {
-    display: inline-block;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    color: var(--text);
-    padding: 7px 14px;
-    border-radius: 20px;
-    font-size: 0.82rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background-color var(--transition), border-color var(--transition), color var(--transition);
-}
 
 .sosmed-btn:hover {
     background: var(--red);
