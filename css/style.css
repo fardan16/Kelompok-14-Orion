@@ -1032,20 +1032,27 @@ footer {
 
 .footer-social {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    flex-direction: row;
+    gap: 12px;
 }
 
-.footer-social a {
-    color: #f1c40f;
-    text-decoration: none;
-    font-size: 0.88rem;
-    font-weight: 600;
-    transition: color var(--transition);
-}
-
-.footer-social a:hover {
+.footer-social .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #5e2d1d;
     color: var(--white);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color var(--transition), transform var(--transition);
+}
+
+.footer-social .social-icon:hover {
+    background-color: #7b3d27;
+    transform: translateY(-2px);
 }
 
 .footer-copy {
