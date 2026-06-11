@@ -995,11 +995,18 @@ header {
 }
 
 .btn-maxim {
-    background: #2A2A4A;
+    background:#FFDE21;
+    color: #160D04;
 }
 
 .btn-shopee {
-    background: #EE4D2D;
+    background: #ffffff;
+    color: #EE4D2D;
+}
+
+.btn-gofood {
+    background: #ffffff; 
+    color: var(--ink);
 }
 
 .offline-steps {
