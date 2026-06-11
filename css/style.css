@@ -1,6 +1,6 @@
 /*🗿*/
 
-/* ---- DESIGN TOKENS ---- */
+/* DESIGN TOKENS */
 :root {
     /* Palette */
     --cream: #FAF6EF;
@@ -41,7 +41,7 @@
     --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ---- RESET ---- */
+/* RESET */
 *,
 *::before,
 *::after {
@@ -73,7 +73,7 @@ a {
     color: inherit;
 }
 
-/* ---- ANIMATIONS ---- */
+/* ANIMATIONS */
 @keyframes fadeUp {
     from {
         opacity: 0;
@@ -100,9 +100,7 @@ a {
     animation: fadeUp 0.8s var(--ease) both;
 }
 
-/* ============================================================
-   HEADER / NAVBAR
-   ============================================================ */
+/* HEADER / NAVBAR */
 header {
     background: var(--ink);
     position: sticky;
@@ -132,6 +130,7 @@ header {
     display: flex;
     align-items: center;
     gap: 13px;
+    min-height: 40px;
 }
 
 .logo-img {
@@ -147,6 +146,8 @@ header {
     display: flex;
     flex-direction: column;
     line-height: 1.15;
+    min-width: 175px;
+    white-space: nowrap;
 }
 
 .logo-name {
@@ -243,9 +244,7 @@ header {
     transition: transform var(--transition), opacity var(--transition);
 }
 
-/* ============================================================
-   HERO — Main Landing
-   ============================================================ */
+/* HERO — Main Landing */
 .hero {
     position: relative;
     min-height: 620px;
@@ -367,9 +366,7 @@ header {
     flex-wrap: wrap;
 }
 
-/* ============================================================
-   BUTTONS
-   ============================================================ */
+/* BUTTONS */
 .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -419,9 +416,7 @@ header {
     color: var(--white);
 }
 
-/* ============================================================
-   KEUNGGULAN — Why Choose Us Strip
-   ============================================================ */
+/* KEUNGGULAN — Why Choose Us Strip */
 .keunggulan {
     background: var(--white);
     padding: 0;
@@ -504,9 +499,7 @@ header {
     line-height: 1.65;
 }
 
-/* ============================================================
-   SECTION TYPOGRAPHY SYSTEM
-   ============================================================ */
+/* SECTION TYPOGRAPHY SYSTEM */
 .section-label {
     text-align: center;
     font-size: 0.7rem;
@@ -538,9 +531,7 @@ header {
     font-weight: 400;
 }
 
-/* ============================================================
-   BEST SELLER — Menu Grid Section
-   ============================================================ */
+/* BEST SELLER — Menu Grid Section */
 .best-seller {
     padding: 96px 28px 80px;
     max-width: 1240px;
@@ -596,7 +587,7 @@ header {
     margin-top: 52px;
 }
 
-/* ---- Cards Grid ---- */
+/* Cards Grid */
 .grid-container {
     display: flex;
     flex-wrap: wrap;
@@ -714,9 +705,7 @@ header {
     background: var(--burgundy);
 }
 
-/* ============================================================
-   PAGE HERO — katalog.html & kontak.html banner
-   ============================================================ */
+/* PAGE HERO — katalog.html & kontak.html banner */
 .page-hero {
     position: relative;
     background-color: var(--ink);
@@ -771,9 +760,7 @@ header {
     z-index: 1;
 }
 
-/* ============================================================
-   FILTER — Katalog sticky filter bar
-   ============================================================ */
+/* FILTER — Katalog sticky filter bar */
 .filter-section {
     background: var(--white);
     padding: 22px 28px;
@@ -819,9 +806,7 @@ header {
     box-shadow: 0 2px 10px rgba(22, 13, 4, 0.2);
 }
 
-/* ============================================================
-   KATALOG CONTENT
-   ============================================================ */
+/* KATALOG CONTENT */
 .katalog-content {
     padding: 52px 28px 84px;
     max-width: 1240px;
@@ -836,9 +821,7 @@ header {
     letter-spacing: 0.04em;
 }
 
-/* ============================================================
-   MODAL — Order Options
-   ============================================================ */
+/* MODAL — Order Options */
 .modal {
     display: none;
     position: fixed;
@@ -1038,9 +1021,7 @@ header {
     box-shadow: 0 4px 16px rgba(37, 211, 102, 0.38);
 }
 
-/* ============================================================
-   LOKASI & KONTAK
-   ============================================================ */
+/* LOKASI & KONTAK */
 .lokasi-section {
     padding: 64px 28px 96px;
 }
@@ -1256,9 +1237,7 @@ header {
     text-align: center;
 }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
+/* FOOTER */
 footer {
     background: var(--ink);
     color: rgba(255, 255, 255, 0.6);
@@ -1343,9 +1322,7 @@ footer::before {
     letter-spacing: 0.02em;
 }
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
+/* RESPONSIVE */
 @media (max-width: 900px) {
     .kontak-grid {
         grid-template-columns: 1fr 1fr;
@@ -1491,7 +1468,7 @@ footer::before {
     }
 }
 
-/* ---- Misc helpers ---- */
+/* Misc helpers */
 .order-text {
     text-align: center;
     align-items: center;
