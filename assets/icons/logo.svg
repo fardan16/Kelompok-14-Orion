@@ -1,40 +1,128 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
-  <!-- Lingkaran latar merah -->
-  <circle cx="80" cy="80" r="80" fill="#c0392b"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <!-- Dark radial background for depth -->
+    <radialGradient id="bgGrad" cx="40%" cy="38%" r="65%">
+      <stop offset="0%" stop-color="#2E1208"/>
+      <stop offset="100%" stop-color="#160D04"/>
+    </radialGradient>
 
-  <!-- Lingkaran dalam (aksen) -->
-  <circle cx="80" cy="80" r="68" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+    <!-- Gold gradient for meteor core -->
+    <linearGradient id="meteorGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DEAC45"/>
+      <stop offset="60%" stop-color="#C4901C"/>
+      <stop offset="100%" stop-color="#A47516"/>
+    </linearGradient>
 
-  <!-- Mangkok bakso - badan mangkok -->
-  <ellipse cx="80" cy="92" rx="38" ry="14" fill="#fff" opacity="0.95"/>
-  <path d="M42 92 Q42 118 80 118 Q118 118 118 92 Z" fill="#fff" opacity="0.95"/>
+    <!-- Gold shimmer for bowl rim -->
+    <linearGradient id="rimGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#DEAC45"/>
+      <stop offset="100%" stop-color="#C4901C"/>
+    </linearGradient>
 
-  <!-- Mangkok bakso - bibir atas -->
-  <ellipse cx="80" cy="92" rx="38" ry="9" fill="#fdf0ee"/>
-  <ellipse cx="80" cy="92" rx="30" ry="6" fill="#f5d8d4"/>
+    <!-- Bowl fill -->
+    <linearGradient id="bowlFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2A1208"/>
+      <stop offset="100%" stop-color="#1A0A04"/>
+    </linearGradient>
 
-  <!-- Bakso - bola utama di tengah -->
-  <circle cx="80" cy="82" r="13" fill="#c0392b"/>
-  <circle cx="76" cy="78" r="3.5" fill="rgba(255,255,255,0.25)"/>
+    <!-- Circular clip -->
+    <clipPath id="circle">
+      <circle cx="60" cy="60" r="58"/>
+    </clipPath>
 
-  <!-- Bakso - bola kecil kiri -->
-  <circle cx="58" cy="86" r="8" fill="#e74c3c"/>
-  <circle cx="55.5" cy="83.5" r="2" fill="rgba(255,255,255,0.2)"/>
+    <!-- Glow filter for meteor -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
 
-  <!-- Bakso - bola kecil kanan -->
-  <circle cx="102" cy="86" r="8" fill="#e74c3c"/>
-  <circle cx="99.5" cy="83.5" r="2" fill="rgba(255,255,255,0.2)"/>
+    <!-- Soft shadow under bowl -->
+    <filter id="bowlShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
 
-  <!-- Uap (tiga garis lengkung di atas) -->
-  <path d="M66 68 Q68 62 66 56" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="2.5" stroke-linecap="round"/>
-  <path d="M80 65 Q82 59 80 53" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="2.5" stroke-linecap="round"/>
-  <path d="M94 68 Q96 62 94 56" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="60" fill="url(#bgGrad)"/>
 
-  <!-- Bintang / meteor kecil pojok kanan atas -->
-  <polygon points="130,28 132.5,35 140,35 134,39.5 136.5,47 130,42.5 123.5,47 126,39.5 120,35 127.5,35"
-           fill="#f1c40f" opacity="0.92"/>
+  <!-- Subtle grain ring border (inner glow effect) -->
+  <circle cx="60" cy="60" r="58" fill="none" stroke="rgba(196,144,28,0.20)" stroke-width="1"/>
+  <circle cx="60" cy="60" r="55" fill="none" stroke="rgba(196,144,28,0.06)" stroke-width="0.5"/>
 
-  <!-- Bintang kecil pojok kiri atas -->
-  <polygon points="30,40 31.5,44.5 36,44.5 32.5,47 34,51.5 30,48.5 26,51.5 27.5,47 24,44.5 28.5,44.5"
-           fill="#f1c40f" opacity="0.65"/>
+  <g clip-path="url(#circle)">
+
+    <!-- ═══ METEOR TRAIL (behind bowl) ═══ -->
+    <!-- Longest tail streak -->
+    <line x1="22" y1="30" x2="72" y2="62" stroke="rgba(196,144,28,0.12)" stroke-width="8" stroke-linecap="round"/>
+    <line x1="22" y1="30" x2="72" y2="62" stroke="rgba(222,172,69,0.18)" stroke-width="4" stroke-linecap="round"/>
+    <line x1="22" y1="30" x2="72" y2="62" stroke="rgba(222,172,69,0.30)" stroke-width="1.5" stroke-linecap="round"/>
+
+    <!-- Secondary parallel streak -->
+    <line x1="18" y1="36" x2="64" y2="64" stroke="rgba(196,144,28,0.08)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="18" y1="36" x2="64" y2="64" stroke="rgba(222,172,69,0.13)" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Tertiary faint streak -->
+    <line x1="26" y1="25" x2="68" y2="55" stroke="rgba(196,144,28,0.07)" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Small spark dots along trail -->
+    <circle cx="35" cy="39" r="1.2" fill="rgba(222,172,69,0.55)"/>
+    <circle cx="46" cy="46" r="0.9" fill="rgba(222,172,69,0.45)"/>
+    <circle cx="30" cy="44" r="0.7" fill="rgba(222,172,69,0.35)"/>
+    <circle cx="52" cy="53" r="1.0" fill="rgba(222,172,69,0.50)"/>
+
+    <!-- ═══ STEAM above bowl ═══ -->
+    <!-- Three gentle steam curves -->
+    <path d="M49,47 Q46,41 49,36 Q52,31 49,26" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1.4" stroke-linecap="round"/>
+    <path d="M60,45 Q57,39 60,34 Q63,29 60,24" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M71,47 Q68,41 71,36 Q74,31 71,26" fill="none" stroke="rgba(255,255,255,0.11)" stroke-width="1.0" stroke-linecap="round"/>
+
+    <!-- ═══ BOWL BODY ═══ -->
+    <!-- Bowl main shape - half-ellipse -->
+    <path d="M33,62 Q33,88 60,88 Q87,88 87,62 Z" fill="url(#bowlFill)" filter="url(#bowlShadow)"/>
+
+    <!-- Broth / soup surface inside bowl -->
+    <ellipse cx="60" cy="62" rx="27" ry="5.5" fill="#7B1A1A" opacity="0.85"/>
+    <!-- Broth highlight sheen -->
+    <ellipse cx="56" cy="60.5" rx="10" ry="2" fill="rgba(196,144,28,0.18)"/>
+
+    <!-- Bakso balls (3 circles peeking above broth) -->
+    <circle cx="50" cy="60" r="5.5" fill="#3D1A0A"/>
+    <circle cx="50" cy="60" r="5.5" fill="none" stroke="#7B1A1A" stroke-width="0.8" opacity="0.6"/>
+    <circle cx="48.5" cy="58.5" r="1.4" fill="rgba(222,172,69,0.20)"/>
+
+    <circle cx="62" cy="59" r="6" fill="#3D1A0A"/>
+    <circle cx="62" cy="59" r="6" fill="none" stroke="#7B1A1A" stroke-width="0.8" opacity="0.6"/>
+    <circle cx="60.5" cy="57.5" r="1.5" fill="rgba(222,172,69,0.20)"/>
+
+    <circle cx="73" cy="61" r="5" fill="#3D1A0A"/>
+    <circle cx="73" cy="61" r="5" fill="none" stroke="#7B1A1A" stroke-width="0.8" opacity="0.6"/>
+    <circle cx="71.5" cy="59.5" r="1.2" fill="rgba(222,172,69,0.20)"/>
+
+    <!-- Bowl rim (top ellipse) — gold -->
+    <ellipse cx="60" cy="62" rx="27" ry="5.5" fill="none" stroke="url(#rimGold)" stroke-width="3.5"/>
+    <!-- Inner rim highlight -->
+    <ellipse cx="60" cy="62" rx="27" ry="5.5" fill="none" stroke="rgba(222,172,69,0.35)" stroke-width="1"/>
+
+    <!-- ═══ METEOR CORE (in front of bowl, upper-right) ═══ -->
+    <g filter="url(#glow)">
+      <!-- Outer glow aura -->
+      <circle cx="78" cy="46" r="9" fill="rgba(196,144,28,0.15)"/>
+      <!-- Main meteor sphere -->
+      <circle cx="78" cy="46" r="6.5" fill="url(#meteorGold)"/>
+      <!-- Bright specular highlight -->
+      <circle cx="75.5" cy="43.5" r="2.2" fill="rgba(255,245,200,0.55)"/>
+      <!-- Small crescent shadow -->
+      <path d="M80,44 Q83,48 80,51" fill="none" stroke="rgba(100,50,0,0.35)" stroke-width="1.2" stroke-linecap="round"/>
+    </g>
+
+    <!-- ═══ DECORATIVE RING around meteor ═══ -->
+    <circle cx="78" cy="46" r="10" fill="none" stroke="rgba(196,144,28,0.25)" stroke-width="0.8" stroke-dasharray="3,3"/>
+
+  </g>
+
+  <!-- Outer border ring (gold accent) -->
+  <circle cx="60" cy="60" r="58" fill="none" stroke="url(#rimGold)" stroke-width="1.5"/>
 </svg>
